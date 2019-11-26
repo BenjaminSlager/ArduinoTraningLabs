@@ -22,13 +22,14 @@ void setup() {
 
 void loop() {
   // going to set the brightness to pin9
+  
   analogWrite(led, brightness);
 
   //change the brightness for the next time throught the loop
   brightness = brightness + fadeAmount;
 
   // reverse the direction of fading at the end of the fade
-  if (brightness == 0 || brightness == 255); {
+  if (brightness == 0 || brightness == 255) {
     fadeAmount = -fadeAmount;
   }
   delay(30);
